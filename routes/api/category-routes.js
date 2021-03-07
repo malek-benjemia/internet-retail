@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-  Post.findOne({
+  Category.findOne({
     where: {
       id: req.params.id
     },
@@ -87,6 +87,17 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
+  Product.update(
+    {
+      category_id: null
+    },
+    {
+      where: {
+        category_id: req.params.id
+      }
+    }
+  )
+  .then((product) => {
   Category.destroy({
     where: {
       id: req.params.id
@@ -102,7 +113,8 @@ router.delete('/:id', (req, res) => {
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
-    });
+    })
+  })
 });
 
 module.exports = router;

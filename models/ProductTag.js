@@ -5,7 +5,14 @@ const sequelize = require('../config/connection');
 class ProductTag extends Model {
 
   // ProductTag.bulkCreate(productTagIdArr)
-
+  static bulkCreate(productTagIdArr){
+    for (i = 0; i < productTagIdArr.length; i++)  {
+        return models.ProductTag.create({
+        product_id: productTagIdArr[i].product_id,
+        tag_id: productTagIdArr[i].tag_id
+        })
+    }
+  }
 }
 
 ProductTag.init(

@@ -2,18 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class ProductTag extends Model {
-
-  // ProductTag.bulkCreate(productTagIdArr)
-  static bulkCreate(productTagIdArr){
-    for (var i = 0; i < productTagIdArr.length; i++)  {
-        return ProductTag.create({
-        product_id: productTagIdArr[i].product_id,
-        tag_id: productTagIdArr[i].tag_id
-        })
-    }
-  }
-}
+class ProductTag extends Model {}
 
 ProductTag.init(
   {

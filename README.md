@@ -1,4 +1,4 @@
-# Title: E-commerce Back End Starter Code</br>
+# Title: E-commerce Back End</br>
 
 ## <span id="description">Description</span>
 Build an application that allows to manage an ecommerce database. Please find refer to the <a href="https://drive.google.com/file/d/1TX-GWMsnec7NIjbq3FoOIUKdQZ-SqdSH/view">video1</a>, <a href="https://drive.google.com/file/d/1CkAi6H_u9PsZbOV36XkLUJFxDaBMuxK8/view">video2</a> and <a href="https://drive.google.com/file/d/1_Yae2ZG4MOC-a-HsUwVmr19O1GwSBK44/view">video3</a> for more information.
